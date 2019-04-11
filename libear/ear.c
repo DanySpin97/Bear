@@ -195,7 +195,7 @@ static int mt_safe_on_load(void) {
         return 0;
 #endif
     // Create locale to encode UTF-8 characters
-    utf_locale = newlocale(LC_CTYPE_MASK, "", (locale_t)0);
+    utf_locale = newlocale(LC_CTYPE_MASK, "C", (locale_t)0);
     if ((locale_t)0 == utf_locale) {
         PERROR("newlocale");
         return 0;
